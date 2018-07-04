@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RelativeLayoutActivity">
+    <!--相对布局-->
+    <Button
+        android:id="@+id/btn1_relative_id"
+        android:text="button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn2_relative_id"
+        android:text="button2"
+        android:layout_below="@id/btn1_relative_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn3_relative_id"
+        android:text="button3"
+        android:layout_below="@id/btn2_relative_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</android.widget.RelativeLayout>
