@@ -4,6 +4,7 @@
 
     <!-- 申请权限 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -12,12 +13,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <provider
+            android:name=".Provider.MyContentProvider"
+            android:authorities="com.lsm.android.provider"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
         <service
             android:name=".server.MyService"
             android:enabled="true"
             android:exported="true">
         </service>
-
+        <service
+            android:name=".server.FrontService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <service
+            android:name=".server.MyIntentService"
+            android:exported="false">
+        </service>
         <!-- 开机自启动应用 -->
         <receiver
             android:name=".auto.AutoRun"
@@ -89,6 +104,10 @@
         </activity>
         <activity android:name=".ui.ServiceActivity">
         </activity>
+        <activity android:name=".ui.ContentProviderActivity">
+        </activity>
+
+
     </application>
 
 </manifest>

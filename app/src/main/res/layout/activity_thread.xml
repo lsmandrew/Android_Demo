@@ -11,8 +11,8 @@
         android:id="@+id/btn_Thread"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="28dp"
         android:onClick="onClick_Thread"
         android:text="thread"
@@ -34,4 +34,16 @@
         app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toEndOf="@+id/btn_Thread"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        android:onClick="onClick_AsyncTask"
+        android:text="AsyncTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Thread"/>
 </android.support.constraint.ConstraintLayout>

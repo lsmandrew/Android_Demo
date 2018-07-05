@@ -6,8 +6,12 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
-/*
- * 自定义服务
+import static java.lang.Thread.sleep;
+
+
+/**
+ * 普通的服务
+ * 在主线程下运行
  */
 public class MyService extends Service {
 
@@ -19,7 +23,7 @@ public class MyService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d("MyService", "onCreate: ");
+        Log.d("MyService", "onCreate: id="+ Thread.currentThread().getId());
     }
 
     @Override
@@ -31,6 +35,19 @@ public class MyService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d("MyService", "onStartCommand exe: ");
+        //self create thread
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Log.d("MyService", "run: id=" + Thread.currentThread().getId());
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                stopSelf();//停止服务
+            }
+        }).start();
         return super.onStartCommand(intent, flags, startId);
     }
 
