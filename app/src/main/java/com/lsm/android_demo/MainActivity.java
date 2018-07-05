@@ -14,6 +14,8 @@ import com.lsm.android_demo.ui.BroadcastActivity;
 import com.lsm.android_demo.ui.LifeCycleActivity;
 import com.lsm.android_demo.ui.LinearLayoutActivity;
 import com.lsm.android_demo.ui.RelativeLayoutActivity;
+import com.lsm.android_demo.ui.ServiceActivity;
+import com.lsm.android_demo.ui.ThreadActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -70,6 +72,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick_Broadcast(View view) {
         Intent intent = new Intent(this, BroadcastActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick_Thread(View view) {
+        Intent intent = new Intent(this, ThreadActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick_Service(View view) {
+        Intent intent = new Intent(this, ServiceActivity.class);
         startActivity(intent);
     }
 }

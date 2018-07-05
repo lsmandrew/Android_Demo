@@ -12,6 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".server.MyService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
 
         <!-- 开机自启动应用 -->
         <receiver
@@ -24,7 +29,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </receiver>
-
         <receiver
             android:name=".broadcast.MyBroadcastReceiver"
             android:enabled="true"
@@ -81,8 +85,10 @@
         </activity>
         <activity android:name=".ui.BroadcastActivity">
         </activity>
-
-
+        <activity android:name=".ui.ThreadActivity">
+        </activity>
+        <activity android:name=".ui.ServiceActivity">
+        </activity>
     </application>
 
 </manifest>
