@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.lsm.android_demo.ui.BroadcastActivity;
 import com.lsm.android_demo.ui.ContentProviderActivity;
+import com.lsm.android_demo.ui.FileActivity;
 import com.lsm.android_demo.ui.LifeCycleActivity;
 import com.lsm.android_demo.ui.LinearLayoutActivity;
 import com.lsm.android_demo.ui.RelativeLayoutActivity;
@@ -88,6 +89,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick_Content(View view) {
         Intent intent = new Intent(this, ContentProviderActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick_File(View view) {
+        Intent intent = new Intent(this, FileActivity.class);
         startActivity(intent);
     }
 }
