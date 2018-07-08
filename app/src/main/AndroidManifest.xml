@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.lsm.android_demo">
+    package="com.lsm.android_demo">
 
     <!-- 申请权限 -->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.lsm.android_demo.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,32 +19,28 @@
             android:name=".Provider.MyContentProvider"
             android:authorities="com.lsm.android.provider"
             android:enabled="true"
-            android:exported="true">
-        </provider>
+            android:exported="true" />
 
         <service
             android:name=".server.MyService"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true" />
         <service
             android:name=".server.FrontService"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true" />
         <service
             android:name=".server.MyIntentService"
-            android:exported="false">
-        </service>
+            android:exported="false" />
         <!-- 开机自启动应用 -->
         <receiver
             android:name=".auto.AutoRun"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </receiver>
         <receiver
@@ -51,65 +48,57 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.lsm.android_demo.MY_BROADCAST"/>
+                <action android:name="com.lsm.android_demo.MY_BROADCAST" />
             </intent-filter>
         </receiver>
 
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ui.LinearLayoutActivity"
-            android:label="LinearActivity">
-        </activity>
+            android:label="LinearActivity" />
         <activity
             android:name=".ui.RelativeLayoutActivity"
-            android:label="RelativeActivity">
-        </activity>
+            android:label="RelativeActivity" />
         <activity
             android:name=".ui.MenuActivity"
             android:label="MenuActivity">
 
             <!-- 隐式的intent -->
             <intent-filter>
-                <action android:name="com.lsm.android_demo.ui.MenuActivity"/>
+                <action android:name="com.lsm.android_demo.ui.MenuActivity" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ui.LifeCycleActivity"
-            android:launchMode="singleTask">
-        </activity>
+            android:launchMode="singleTask" />
         <activity
             android:name=".ui.SingleTopActivity"
             android:label="SingleTopActivity"
-            android:launchMode="singleTop">
-        </activity>
+            android:launchMode="singleTop" />
         <activity
             android:name=".ui.SingleTaskActivity"
             android:label="SingleTask"
-            android:launchMode="singleTask">
-        </activity>
+            android:launchMode="singleTask" />
         <activity
             android:name=".ui.SingleInstanceActivity"
             android:label="SingleInstance"
-            android:launchMode="singleInstance">
-        </activity>
-        <activity android:name=".ui.BroadcastActivity">
-        </activity>
-        <activity android:name=".ui.ThreadActivity">
-        </activity>
-        <activity android:name=".ui.ServiceActivity">
-        </activity>
-        <activity android:name=".ui.ContentProviderActivity">
-        </activity>
-        <activity android:name=".ui.FileActivity">
-        </activity>
+            android:launchMode="singleInstance" />
+        <activity android:name=".ui.BroadcastActivity" />
+        <activity android:name=".ui.ThreadActivity" />
+        <activity android:name=".ui.ServiceActivity" />
+        <activity android:name=".ui.ContentProviderActivity" />
+        <activity android:name=".ui.FileActivity" />
+        <activity android:name=".ui.FragmentActivity" />
+        <activity android:name=".ui.WebViewActivity" />
+        <activity android:name=".ui.HttpActivity"></activity>
     </application>
 
 </manifest>
