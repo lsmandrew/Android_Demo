@@ -12,10 +12,13 @@ import android.widget.Toast;
 
 import com.lsm.android_demo.ui.BroadcastActivity;
 import com.lsm.android_demo.ui.ContentProviderActivity;
+import com.lsm.android_demo.ui.ControlViewActivity;
 import com.lsm.android_demo.ui.FileActivity;
+import com.lsm.android_demo.ui.FragmentActivity;
 import com.lsm.android_demo.ui.HttpActivity;
 import com.lsm.android_demo.ui.LifeCycleActivity;
 import com.lsm.android_demo.ui.LinearLayoutActivity;
+import com.lsm.android_demo.ui.PresentationActivity;
 import com.lsm.android_demo.ui.RelativeLayoutActivity;
 import com.lsm.android_demo.ui.ServiceActivity;
 import com.lsm.android_demo.ui.ThreadActivity;
@@ -106,6 +109,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick_Http(View view) {
         Intent intent = new Intent(this, HttpActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick_Fragment(View view) {
+        Intent intent = new Intent(this, FragmentActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick_ControlView(View view) {
+        Intent intent = new Intent(this, ControlViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick_Second(View view) {
+        //int disp_count = HardwareUtil.getScreenCount(this);
+//        Display[] displays = HardwareUtil.getScreen(this);
+//        SecondPresentation secondPresentation =new SecondPresentation (this, displays[1]);//displays[1]是副屏
+//        secondPresentation.getWindow().setType(WindowManager.LayoutParams.TYPE_TOAST);
+//        secondPresentation.show();
+        Intent intent = new Intent(this, PresentationActivity.class);
         startActivity(intent);
     }
 }

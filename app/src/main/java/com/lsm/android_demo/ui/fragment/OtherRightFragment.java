@@ -10,11 +10,13 @@ import android.view.ViewGroup;
 
 import com.lsm.android_demo.R;
 
-public class RightFragment extends Fragment {
+public class OtherRightFragment extends Fragment {
+
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.right_fragment, container, false);
-        return view;
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle
+            savedInstanceState) {
+        View view = inflater.inflate(R.layout.right_other, container, false);
+        return  view;
     }
 }
