@@ -104,6 +104,10 @@
         </activity>
         <activity android:name=".ui.PresentationActivity">
         </activity>
+        <activity android:name=".ui.ReactiveXActivity">
+        </activity>
+        <activity android:name=".ui.JSONActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -19,6 +19,7 @@ import com.lsm.android_demo.ui.HttpActivity;
 import com.lsm.android_demo.ui.LifeCycleActivity;
 import com.lsm.android_demo.ui.LinearLayoutActivity;
 import com.lsm.android_demo.ui.PresentationActivity;
+import com.lsm.android_demo.ui.ReactiveXActivity;
 import com.lsm.android_demo.ui.RelativeLayoutActivity;
 import com.lsm.android_demo.ui.ServiceActivity;
 import com.lsm.android_demo.ui.ThreadActivity;
@@ -129,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
 //        secondPresentation.getWindow().setType(WindowManager.LayoutParams.TYPE_TOAST);
 //        secondPresentation.show();
         Intent intent = new Intent(this, PresentationActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick_ReactiveX(View view) {
+        Intent intent = new Intent(this, ReactiveXActivity.class);
         startActivity(intent);
     }
 }
